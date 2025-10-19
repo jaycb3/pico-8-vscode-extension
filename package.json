@@ -2,7 +2,7 @@
   "name": "pico8-enhanced",
   "displayName": "PICO-8 Enhanced",
   "description": "Complete PICO-8 development support with API documentation, syntax highlighting, and IntelliSense",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "jaybennett",
   "icon": "images/icon.png",
   "engines": {
@@ -49,8 +49,18 @@
       "[pico8]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 1,
-        "editor.detectIndentation": false
-      }
+        "editor.detectIndentation": false,
+        "files.trimTrailingWhitespace": false
+      },
+      "Lua.workspace.ignorePattern": [
+        "**/*.p8"
+      ],
+      "Lua.diagnostics.globals": [
+        "_init",
+        "_update",
+        "_update60",
+        "_draw"
+      ]
     }
   },
   "repository": {
