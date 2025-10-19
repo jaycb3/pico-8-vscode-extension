@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+npm-debug.log*
+
+# VS Code
+.vscode/
+*.vsix
+
+# macOS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build output
+out/
+dist/
+
+# Temporary files
+*.tmp
+*.log
+

@@ -1,0 +1,62 @@
+{
+  "name": "pico8-enhanced",
+  "displayName": "PICO-8 Enhanced",
+  "description": "Complete PICO-8 development support with API documentation, syntax highlighting, and IntelliSense",
+  "version": "1.0.0",
+  "publisher": "jaybennett",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "pico-8",
+    "pico8",
+    "lua",
+    "game development",
+    "fantasy console"
+  ],
+  "activationEvents": [
+    "onLanguage:lua"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "pico8",
+        "aliases": [
+          "PICO-8",
+          "pico8"
+        ],
+        "extensions": [
+          ".p8"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pico8",
+        "scopeName": "source.pico8",
+        "path": "./syntaxes/pico8.tmLanguage.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[pico8]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 1,
+        "editor.detectIndentation": false
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/pico8-vscode-extension"
+  },
+  "license": "MIT"
+}
+
