@@ -2,6 +2,18 @@
 
 All notable changes to the "pico8-enhanced" extension will be documented in this file.
 
+## [1.0.1] - 2025-10-19
+
+### Fixed
+- Improved syntax highlighting for PICO-8 compound assignment operators (`+=`, `-=`, `*=`, `/=`, `%=`, `^=`, `..=`)
+- Added support for PICO-8 shorthand if statement syntax: `if (condition) statement`
+- Added syntax highlighting for `?` as shorthand for `print()`
+- Fixed repository URL in package.json to point to correct GitHub repo
+
+### Changed
+- Reordered operator patterns for better compound operator detection
+- Enhanced operator scoping for more accurate syntax highlighting
+
 ## [1.0.0] - 2025-01-19
 
 ### Added

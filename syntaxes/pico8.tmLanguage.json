@@ -6,12 +6,24 @@
     { "include": "#comments" },
     { "include": "#strings" },
     { "include": "#numbers" },
+    { "include": "#shorthand-if" },
     { "include": "#keywords" },
     { "include": "#functions" },
     { "include": "#operators" },
     { "include": "#constants" }
   ],
   "repository": {
+    "shorthand-if": {
+      "patterns": [
+        {
+          "name": "meta.shorthand-if.pico8",
+          "match": "\\b(if)\\s*\\([^)]+\\)\\s+(?!then\\b)",
+          "captures": {
+            "1": { "name": "keyword.control.pico8" }
+          }
+        }
+      ]
+    },
     "comments": {
       "patterns": [
         {
@@ -94,6 +106,10 @@
           "match": "\\b(pset|pget|sset|sget|spr|sspr|pal|palt|cls|camera|clip|rectfill|circfill|rect|circ|line|ovalfill|oval|fillp|color|cursor|print)\\b"
         },
         {
+          "name": "support.function.pico8.shorthand",
+          "match": "\\?"
+        },
+        {
           "name": "support.function.pico8.tables",
           "match": "\\b(add|del|deli|count|all|foreach|pairs)\\b"
         },
@@ -130,16 +146,20 @@
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.arithmetic.pico8",
-          "match": "[+\\-*/%^]|\\.\\.|\\/\\/"
+          "name": "keyword.operator.assignment.pico8.compound",
+          "match": "\\+=|\\-=|\\*=|\\/=|%=|\\^=|\\.\\.="
         },
         {
           "name": "keyword.operator.comparison.pico8",
           "match": "==|~=|!=|<=|>=|<|>"
         },
         {
+          "name": "keyword.operator.arithmetic.pico8",
+          "match": "[+\\-*/%^]|\\.\\.|\\/\\/"
+        },
+        {
           "name": "keyword.operator.assignment.pico8",
-          "match": "=|\\+=|-=|\\*=|\\/=|%=|\\^=|\\.\\.="
+          "match": "="
         }
       ]
     },
